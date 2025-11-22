@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AutoTest {
+
     @Test
     public void Test(){
         Configuration.browser = "edge";
