@@ -16,17 +16,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class edgeRunner {
 
-    protected static WebDriver driver;
-    protected static WebDriverWait wait;
     @BeforeTest(description = "Configure browser before tests")
     public static void setup (){
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "edge";
         Configuration.timeout = 10000;
         open("https://automationexercise.com/");
-
-        driver = new EdgeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         SelenideLogger.addListener("AllureSelenide",
         new AllureSelenide()

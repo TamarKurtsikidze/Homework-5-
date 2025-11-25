@@ -4,19 +4,20 @@ import Base.edgeRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import StepObject.ContactUsFormPSteps;
+import StepObject.ContactUsFormPageSteps;
 
 import static DataObject.ContactUsFormPageData.*;
 
 public class ContactUsFormPageTest extends edgeRunner {
 
-    ContactUsFormPSteps contactUsFormPageSteps = new ContactUsFormPSteps();
+    ContactUsFormPageSteps contactUsFormPageSteps = new ContactUsFormPageSteps();
 
     @Test
-    @Description("Validate ContactUs page ")
+    @Description("Validate sending message on Contact Us page")
     @Severity(SeverityLevel.CRITICAL)
-    public void sendingMessageByContactUsFormCase() {
+    public void successfullySendingMessageByContactUsFormCase() {
         contactUsFormPageSteps
                 .closePopUpp()
                 .goToContactUs()
@@ -25,7 +26,9 @@ public class ContactUsFormPageTest extends edgeRunner {
                 .fillSubject(subjectCU)
                 .fillMessage(messageCU)
                 .pressSubmitBtn()
-                .goToHomePage();
+                .SuccessMsg();
+
+        Assert.assertTrue(contactUsFormPageSteps.successMsg.exists());
 
     }
 }

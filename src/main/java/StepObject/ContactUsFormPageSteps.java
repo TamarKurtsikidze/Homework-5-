@@ -3,53 +3,52 @@ package StepObject;
 import PageObject.ContactUsFormPage;
 import io.qameta.allure.Step;
 
-public class ContactUsFormPSteps extends ContactUsFormPage {
+public class ContactUsFormPageSteps extends ContactUsFormPage {
     @Step("Close popUpp")
-    public ContactUsFormPage closePopUpp() {
+    public ContactUsFormPageSteps closePopUpp() {
         popUpp.click();
         return this;
     }
 
     @Step("Go to ContactUsForm page")
-    public ContactUsFormPage goToContactUs() {
+    public ContactUsFormPageSteps goToContactUs() {
         contactUsBtn.click();
         return this;
     }
 
     @Step("Fill the name Input")
-    public ContactUsFormPage fillName(String text) {
+    public ContactUsFormPageSteps fillName(String text) {
         nameInput.setValue(text);
         return this;
     }
 
     @Step("Fill the email Input")
-    public ContactUsFormPage fillEmail(String emails) {
+    public ContactUsFormPageSteps fillEmail(String emails) {
         emailInput.setValue(emails);
         return this;
     }
 
     @Step("Fill Subject Input")
-    public ContactUsFormPage fillSubject(String sbj) {
+    public ContactUsFormPageSteps fillSubject(String sbj) {
         subjectInput.setValue(sbj);
         return this;
     }
 
     @Step("Fill message Input")
-    public ContactUsFormPage fillMessage(String msg) {
+    public ContactUsFormPageSteps fillMessage(String msg) {
         messageInput.setValue(msg);
         return this;
     }
 
     @Step("Press submit")
-    public ContactUsFormPage pressSubmitBtn() {
+    public ContactUsFormPageSteps pressSubmitBtn() {
         submitBtn.click();
         return this;
     }
-
-    @Step("Go to the home page")
-    public ContactUsFormPage goToHomePage() {
-        homeBtn.click();
+@Step("Success Message")
+    public ContactUsFormPageSteps SuccessMsg(){
+        successMsg.isDisplayed();
         return this;
-    }
+}
 
 }
