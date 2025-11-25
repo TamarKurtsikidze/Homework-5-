@@ -15,7 +15,7 @@ captures/
 *.aab
 *.apk
 output-metadata.json
-
+allure-results
 # IntelliJ
 *.iml
 .idea/

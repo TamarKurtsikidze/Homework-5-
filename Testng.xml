@@ -1,15 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="TestAutomation Suite" verbose="1" parallel="tests" thread-count="2">
-    <test name="HomePage" >
+<suite name="TestAutomation Suite" verbose="1">
+    <test name="RegisterUserPageTest">
         <classes>
-            <class name="Booking.com.AutoTest.HomePage" />
+            <class name="Homework5AutoTest.RegisterUserPageTest"/>
         </classes>
     </test>
-    <test name="SearchBar" >
+    <test name="ContactUsForm">
         <classes>
-            <class name="Booking.com.AutoTest.SearchBar" />
+            <class name="Homework5AutoTest.ContactUsFormPageTest"/>
         </classes>
     </test>
-
-</suite>
