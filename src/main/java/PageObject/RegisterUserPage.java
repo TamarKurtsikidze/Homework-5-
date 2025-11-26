@@ -9,8 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RegisterUserPage {
     public SelenideElement
-            popUp = $(by("aria-label", "Consent")),
-            signUpLoginBtn = $(byXpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]")),
+            signUpLoginBtn = $(by("href", "/login")),
             signUpNameInput = $(by("data-qa", "signup-name")),
             signUpEmailInput = $(by("data-qa", "signup-email")),
             signUpBtn = $(by("data-qa", "signup-button")),

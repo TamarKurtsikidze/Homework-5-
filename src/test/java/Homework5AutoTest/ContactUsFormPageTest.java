@@ -1,6 +1,6 @@
 package Homework5AutoTest;
 
-import Base.edgeRunner;
+import Base.chromeRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -10,16 +10,15 @@ import StepObject.ContactUsFormPageSteps;
 
 import static DataObject.ContactUsFormPageData.*;
 
-public class ContactUsFormPageTest extends edgeRunner {
+public class ContactUsFormPageTest extends chromeRunner {
 
     ContactUsFormPageSteps contactUsFormPageSteps = new ContactUsFormPageSteps();
 
     @Test
-    @Description("Validate sending message on Contact Us page")
+    @Description("Validate sending message on Contact Us page without file")
     @Severity(SeverityLevel.CRITICAL)
-    public void successfullySendingMessageByContactUsFormCase() {
+    public void successfullySendingMessageByContactUsFormWithOutFile() {
         contactUsFormPageSteps
-                .closePopUpp()
                 .goToContactUs()
                 .fillName(nameCU)
                 .fillEmail(emailCU)

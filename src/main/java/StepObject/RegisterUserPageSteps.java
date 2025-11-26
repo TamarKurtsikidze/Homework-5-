@@ -4,11 +4,6 @@ import PageObject.RegisterUserPage;
 import io.qameta.allure.Step;
 
 public class RegisterUserPageSteps extends RegisterUserPage {
-    @Step("Close popup")
-    public RegisterUserPageSteps closePopup() {
-        popUp.click();
-        return this;
-    }
 
     @Step("Open signup page")
     public RegisterUserPageSteps openSignUpPage() {
@@ -29,7 +24,7 @@ public class RegisterUserPageSteps extends RegisterUserPage {
     }
 
     @Step("Sign up")
-    public RegisterUserPageSteps signUp(){
+    public RegisterUserPageSteps signUp() {
         signUpBtn.click();
         return this;
     }
@@ -53,13 +48,14 @@ public class RegisterUserPageSteps extends RegisterUserPage {
         return this;
     }
 
-   @Step("Select birthMonth")
-    public RegisterUserPageSteps selectBirthMonth(String birthMonth){
+    @Step("Select birthMonth")
+    public RegisterUserPageSteps selectBirthMonth(String birthMonth) {
         birthMonthSelect.selectOption(birthMonth);
         return this;
     }
-    @Step ("Select birthYear")
-    public RegisterUserPageSteps selectBirthYear(String birthYear){
+
+    @Step("Select birthYear")
+    public RegisterUserPageSteps selectBirthYear(String birthYear) {
         birthYearSelect.selectOption(birthYear);
         return this;
     }
@@ -125,7 +121,7 @@ public class RegisterUserPageSteps extends RegisterUserPage {
     }
 
     @Step("CreateAcc Message Page")
-    public RegisterUserPageSteps createAccMsg(){
+    public RegisterUserPageSteps createAccMsg() {
         createAccMessage.exists();
         return this;
     }

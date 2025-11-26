@@ -6,11 +6,11 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import Base.edgeRunner;
+import Base.chromeRunner;
 
 import static DataObject.RegisterUserPageData.*;
 
-public class RegisterUserPageTest extends edgeRunner {
+public class RegisterUserPageTest extends chromeRunner {
 
     RegisterUserPageSteps registerUserPageSteps = new RegisterUserPageSteps();
 
@@ -18,9 +18,8 @@ public class RegisterUserPageTest extends edgeRunner {
     @Test
     @Description("Create account")
     @Severity(SeverityLevel.CRITICAL)
-    public void creatingAccountSuccesCase(){
+    public void creatingAccountSuccesCase() {
         registerUserPageSteps
-                .closePopup()
                 .openSignUpPage()
                 .fillFullName(fullName)
                 .fillEmail(email)

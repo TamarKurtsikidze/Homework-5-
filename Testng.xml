@@ -1,14 +1,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Test Automation Suite" verbose="1" parallel="tests" thread-count="2">
-    <test name="RegisterUserPageTest">
+<suite name="Test Automation Suite" verbose="1" parallel="tests" thread-count="3">
+    <test name="RegisterUserPageTest" parallel="tests">
         <classes>
             <class name="Homework5AutoTest.RegisterUserPageTest"/>
         </classes>
     </test>
-    <test name="ContactUsFormPageTest">
+    <test name="ContactUsFormPageTest" parallel="tests">
         <classes>
             <class name="Homework5AutoTest.ContactUsFormPageTest"/>
+        </classes>
+    </test>
+    <test name="LoginPageTest" parallel="tests">
+        <classes>
+            <class name="Homework5AutoTest.LoginPageTest"/>
         </classes>
     </test>
 </suite>

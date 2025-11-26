@@ -4,11 +4,6 @@ import PageObject.ContactUsFormPage;
 import io.qameta.allure.Step;
 
 public class ContactUsFormPageSteps extends ContactUsFormPage {
-    @Step("Close popUpp")
-    public ContactUsFormPageSteps closePopUpp() {
-        popUpp.click();
-        return this;
-    }
 
     @Step("Go to ContactUsForm page")
     public ContactUsFormPageSteps goToContactUs() {
@@ -45,10 +40,11 @@ public class ContactUsFormPageSteps extends ContactUsFormPage {
         submitBtn.click();
         return this;
     }
-@Step("Success Message")
-    public ContactUsFormPageSteps SuccessMsg(){
+
+    @Step("Success Message")
+    public ContactUsFormPageSteps SuccessMsg() {
         successMsg.isDisplayed();
         return this;
-}
+    }
 
 }
